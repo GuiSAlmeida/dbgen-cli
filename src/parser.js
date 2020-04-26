@@ -8,6 +8,7 @@ class Parser {
         this.commands.set("insert", /^insert into (\w+)\s\((.+)\)\svalues\s\((.+)\)/);
         this.commands.set("select", /^select (\*?.*) from (\w+)(?:\swhere\s(.+))?/);
         this.commands.set("delete", /^delete from (\w+)(?:\swhere\s(.+))?/);
+        this.commands.set("help", /help/);
     }
 
     parse(statement){

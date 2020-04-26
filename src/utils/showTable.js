@@ -1,8 +1,14 @@
 'use strict'
 
 const Table = require('cli-table');
+const chalk = require('chalk');
 
 module.exports = function showTable(header, data) {
+    let styledHeader = [];
+    header.forEach(element => {
+        styledHeader.push(element.toUpperCase());
+    });
+
     let sizes = [];
     sizes.fill(20, 0, header.length);
 
@@ -13,7 +19,7 @@ module.exports = function showTable(header, data) {
             , 'left': '║', 'left-mid': '╟', 'mid': '─', 'mid-mid': '┼'
             , 'right': '║', 'right-mid': '╢', 'middle': '│'
         },
-        head: header, //['id', 'to-do', 'status']
+        head: styledHeader, //['id', 'to-do', 'status']
         colWidths: sizes // [20, 20, 20...]
     });
 
