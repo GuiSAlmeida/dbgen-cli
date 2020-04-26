@@ -3,7 +3,7 @@
 'use strict'
 
 const Database = require('./src/database');
-let database = new Database();
+const database = new Database();
 const chalk = require('chalk');
 const figlet = require('figlet');
 

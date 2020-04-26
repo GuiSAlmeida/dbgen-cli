@@ -8,7 +8,6 @@ const loadJson = require('./utils/loadJson');
 const saveJson = require('./utils/saveJson');
 
 const showTable = require('./utils/showTable');
-
 class Database {
     constructor() {
         this.newTable = {};
@@ -63,8 +62,6 @@ class Database {
             const header = Object.keys(this.contentTable[tableName].columns);
             const data = this.contentTable[tableName].data;
 
-            console.log(header, data);
-
             return showTable(header, data);
 
         } else {
@@ -88,8 +85,6 @@ class Database {
 
             const header = columns;
             const data = rows;
-
-            console.log(header, data);
             
             return showTable(header, data);
         }
@@ -97,7 +92,6 @@ class Database {
 
     delete(parsedComand) {
         let [, tableName, where] = parsedComand;
-        console.log(parsedComand);
 
         if (where) {
             let [whereParam, whereValue] = where.split(" = ");;
