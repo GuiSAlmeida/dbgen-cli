@@ -6,7 +6,6 @@ const Parser = require('./parser');
 const generateId = require('./utils/generateId');
 const loadJson = require('./utils/loadJson');
 const saveJson = require('./utils/saveJson');
-
 const showTable = require('./utils/showTable');
 
 const chalk = require('chalk');

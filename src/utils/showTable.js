@@ -20,7 +20,7 @@ module.exports = function showTable(header, data) {
             , 'right': '║', 'right-mid': '╢', 'middle': '│'
         },
         head: styledHeader, //['id', 'to-do', 'status']
-        colWidths: sizes // [20, 20, 20...]
+        colWidths: sizes // [20, 20, 20]
     });
 
     data.map((field) => {

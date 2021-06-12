@@ -5,11 +5,10 @@
 const Database = require('./src/database');
 const database = new Database();
 const chalk = require('chalk');
-const figlet = require('figlet');
 
-const newDatabase = async function (args) {
+const newDatabase = function (args) {
     try {
-        await database.execute(args);
+        database.execute(args);
     } catch (error) {
         console.log(`${chalk.red.bold(error.message)}`);
     }
