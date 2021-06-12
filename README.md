@@ -146,4 +146,4 @@ Data written to the `/db.json` file
 
 [**Guilherme Almeida**](https://guisalmeida.com)
 
-See also the list of [contributors](https://github.com/GuiSAlmeida/database-generator/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/GuiSAlmeida/dbgen-cli/contributors) who participated in this project.
