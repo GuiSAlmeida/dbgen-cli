@@ -1,8 +1,17 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/45276342/121779880-3291e880-cb74-11eb-8b38-9922137045d9.png" alt="bdgen-cli"/></p>
 
 <h1 align="center">
   DBgen-CLI
 </h1>
+
+```sh
+      _ _                         ____ _     ___    ╔═════════╤═══════════════════╤═════════╗
+   __| | |__   __ _  ___ _ __    / ___| |   |_ _|   ║ Version │ Author            │ License ║
+  / _` | '_ \ / _` |/ _ \ '_ \  | |   | |    | |    ╟─────────┼───────────────────┼─────────╢
+ | (_| | |_) | (_| |  __/ | | | | |___| |___ | |    ║  0.0.1  │ Guilherme Almeida │   MIT   ║
+  \__,_|_.__/ \__, |\___|_| |_|  \____|_____|___|   ╚═════════╧═══════════════════╧═════════╝
+              |___/                              
+```
+
 dbgen-cli is a SGDB used with CLI created to study the practices of sql commands, databases and JS ES6 features.  
 <br>
 
