@@ -7,10 +7,8 @@
               |___/                              
 ```
 
-### Database generator is a SGDB used with CLI created to study the practices of sql commands, databases and JS ES6 features.  
+### dbgen-cli is a SGDB used with CLI created to study the practices of sql commands, databases and JS ES6 features.  
 
-
-![dbgen-cli](https://user-images.githubusercontent.com/45276342/121274178-57e6d400-c8a0-11eb-86d3-4078e50aaa35.gif)
 
 ## __*Prerequisites*__
 
@@ -21,6 +19,7 @@ You should have installed the [node.js](https://nodejs.org/en/).
 Use the [npm](https://www.npmjs.com/) to install dependencies.
 
 ```node
+cd dbgen-cli
 npm install
 ```
 
@@ -32,14 +31,11 @@ npm link
 
 ## __*Usage*__
 
-Open the terminal and type the following commands.
+In the terminal type the following commands.
 
-```
+```sh
 Usage:
 <commands> -> the keyword 'dbgen' followed by the quotation marks or single quotes
-
-Example:
-dbgen 'select * from table'
 
 Commands:
 create table <tablename> (<field & type>)                       create a new table
@@ -47,12 +43,94 @@ insert into <tablename> (<fieldname>) values (<fieldvalue>)     insert values in
 select [fields] or [*] from author [where] <condition>          shows the selection table in the terminal
 delete from <tablename> [where] <condition>                     delete the selected table or selected field according to where condition
 
-dbgen@0.0.1 fork in https://github.com/GuiSAlmeida/database-generator
+```
+
+## __*Examples*__
+
+```sh
+# Create table "authors"
+dbgen "create table authors (name varchar(50), age int, city varchar(50), state varchar(50), country varchar(50))"
+
+dbgen "select * from authors"
+
+╔════╤══════╤═════╤══════╤═══════╤═════════╗
+║ ID │ NAME │ AGE │ CITY │ STATE │ COUNTRY ║
+╚════╧══════╧═════╧══════╧═══════╧═════════╝
+
+# Inserting records into the table
+dbgen "insert into authors (name, age, city, country) values (Martin Fowler, 57, Walsall, England)"
+dbgen "insert into authors (name, age, city, country) values (Linus Torvalds, 51, Helsinki, Finland)"
+dbgen "insert into authors (name, age, state, country) values (Douglas Crockford, 66, Minnesota, EUA)"
+
+dbgen "select * from authors"
+╔══════════╤═══════════════════╤═════╤══════════╤═══════════╤═════════╗
+║ ID       │ NAME              │ AGE │ CITY     │ STATE     │ COUNTRY ║
+╟──────────┼───────────────────┼─────┼──────────┼───────────┼─────────╢
+║ 5dbd7b0e │ Martin Fowler     │ 57  │ Walsall  │ null      │ England ║
+╟──────────┼───────────────────┼─────┼──────────┼───────────┼─────────╢
+║ 1fa31324 │ Linus Torvalds    │ 51  │ Helsinki │ null      │ Finland ║
+╟──────────┼───────────────────┼─────┼──────────┼───────────┼─────────╢
+║ 294e8872 │ Douglas Crockford │ 66  │ null     │ Minnesota │ EUA     ║
+╚══════════╧═══════════════════╧═════╧══════════╧═══════════╧═════════╝
+
+# Querying records with where
+dbgen "select id, name, age from authors where name = Linus Torvalds"
+╔══════════╤════════════════╤═════╗
+║ ID       │ NAME           │ AGE ║
+╟──────────┼────────────────┼─────╢
+║ 1fa31324 │ Linus Torvalds │ 51  ║
+╚══════════╧════════════════╧═════╝
+
+# Deleting records with where
+dbgen "delete from authors where name = Martin Fowler"
+
+dbgen "select * from authors"
+╔══════════╤═══════════════════╤═════╤══════════╤═══════════╤═════════╗
+║ ID       │ NAME              │ AGE │ CITY     │ STATE     │ COUNTRY ║
+╟──────────┼───────────────────┼─────┼──────────┼───────────┼─────────╢
+║ 1fa31324 │ Linus Torvalds    │ 51  │ Helsinki │ null      │ Finland ║
+╟──────────┼───────────────────┼─────┼──────────┼───────────┼─────────╢
+║ 294e8872 │ Douglas Crockford │ 66  │ null     │ Minnesota │ EUA     ║
+╚══════════╧═══════════════════╧═════╧══════════╧═══════════╧═════════╝
+```
+
+Data written to the `/db.json` file
+```json
+{
+    "authors": {
+        "columns": {
+            "id": "SERIAL NOT NULL",
+            "name": "varchar(50)",
+            "age": "int",
+            "city": "varchar(50)",
+            "state": "varchar(50)",
+            "country": "varchar(50)"
+        },
+        "data": [
+            {
+                "id": "1fa31324",
+                "name": "Linus Torvalds",
+                "age": "51",
+                "city": "Helsinki",
+                "country": "Finland",
+                "state": "null"
+            },
+            {
+                "id": "294e8872",
+                "name": "Douglas Crockford",
+                "age": "66",
+                "state": "Minnesota",
+                "country": "EUA",
+                "city": "null"
+            }
+        ]
+    }
+}
 ```
 
 ## __*Built With*__
 
-* [nodeJS](https://nodejs.org/)
+* [nodeJS](https://nodejs.org/) - With the modules crypto and fs.
 * [cli-table](https://github.com/Automattic/cli-table) - Used to display tables in the terminal.
 * [figlet](https://github.com/patorjk/figlet.js) - Used to making large letters of logo.
 * [chalk](https://github.com/chalk/chalk) - Used to logging of colored information.
