@@ -1,5 +1,5 @@
 ```sh
-      _ _                         ____ _     ___  Database generator v.0.0.1
+      _ _                         ____ _     ___  
    __| | |__   __ _  ___ _ __    / ___| |   |_ _|
   / _` | '_ \ / _` |/ _ \ '_ \  | |   | |    | | 
  | (_| | |_) | (_| |  __/ | | | | |___| |___ | | 
@@ -7,8 +7,10 @@
               |___/                              
 ```
 
->Database generator is a CLI created to study the practices of sql commands and postgres.
+### Database generator is a SGDB used with CLI created to study the practices of sql commands, databases and JS ES6 features.  
 
+
+![dbgen-cli](https://user-images.githubusercontent.com/45276342/121274178-57e6d400-c8a0-11eb-86d3-4078e50aaa35.gif)
 
 ## __*Prerequisites*__
 
@@ -50,6 +52,7 @@ dbgen@0.0.1 fork in https://github.com/GuiSAlmeida/database-generator
 
 ## __*Built With*__
 
+* [nodeJS](https://nodejs.org/)
 * [cli-table](https://github.com/Automattic/cli-table) - Used to display tables in the terminal.
 * [figlet](https://github.com/patorjk/figlet.js) - Used to making large letters of logo.
 * [chalk](https://github.com/chalk/chalk) - Used to logging of colored information.
