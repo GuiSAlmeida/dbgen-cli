@@ -23,9 +23,10 @@ You should have installed the [node.js](https://nodejs.org/en/).
 
 ## __*Installation*__
 
-Use the [npm](https://www.npmjs.com/) to install dependencies.
+Clone this repo and use the [npm](https://www.npmjs.com/) to install the dependencies.
 
 ```node
+git clone git@github.com:GuiSAlmeida/dbgen-cli.git
 cd dbgen-cli
 npm install
 ```
