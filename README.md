@@ -7,7 +7,7 @@
       _ _                         ____ _     ___    ╔═════════╤═══════════════════╤═════════╗
    __| | |__   __ _  ___ _ __    / ___| |   |_ _|   ║ Version │ Author            │ License ║
   / _` | '_ \ / _` |/ _ \ '_ \  | |   | |    | |    ╟─────────┼───────────────────┼─────────╢
- | (_| | |_) | (_| |  __/ | | | | |___| |___ | |    ║  0.0.1  │ Guilherme Almeida │   MIT   ║
+ | (_| | |_) | (_| |  __/ | | | | |___| |___ | |    ║  0.1.0  │ Guilherme Almeida │   MIT   ║
   \__,_|_.__/ \__, |\___|_| |_|  \____|_____|___|   ╚═════════╧═══════════════════╧═════════╝
               |___/                              
 ```
@@ -15,7 +15,7 @@
 dbgen-cli is a SGDB used with CLI created to study the practices of sql commands, databases and JS ES6 features.  
 <br>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/45276342/121779626-03c74280-cb73-11eb-9aa7-6f7caa20c1e0.gif" alt="bdgen-cli" width="960" height="auto"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/45276342/121779626-03c74280-cb73-11eb-9aa7-6f7caa20c1e0.gif" alt="dbgen-cli" width="960" height="auto"/></p>
 
 ## __*Prerequisites*__
 
@@ -26,8 +26,7 @@ You should have installed the [node.js](https://nodejs.org/en/).
 Use the [npm](https://www.npmjs.com/) to install dependencies.
 
 ```node
-cd dbgen-cli
-npm install
+npm install -g dbgen-cli
 ```
 
 Create a global symlink for a dependency.

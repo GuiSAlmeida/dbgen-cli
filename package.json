@@ -1,16 +1,18 @@
 {
-  "name": "database-generator",
-  "version": "0.0.1",
-  "description": "",
+  "name": "dbgen-cli",
+  "author": "Guilherme Almeida <guisalmeida.dev@gmail.com> (https://guisalmeida.com)",
+  "version": "0.1.0",
+  "description": "CLI to create a database with commans sql create with nodejs for study.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "node"
+    "node",
+    "database",
+    "cli"
   ],
-  "author": "Guilherme Almeida",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.0.0",
     "cli-table": "^0.3.1",
@@ -18,5 +20,13 @@
   },
   "bin": {
     "dbgen": "index.js"
+  },
+  "homepage": "https://github.com/GuiSAlmeida/dbgen-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GuiSAlmeida/dbgen-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/GuiSAlmeida/dbgen-cli/issues"
   }
 }
