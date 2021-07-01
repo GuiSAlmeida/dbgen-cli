@@ -23,7 +23,7 @@ You should have installed the [node.js](https://nodejs.org/en/).
 
 ## __*Installation*__
 
-Use the [npm](https://www.npmjs.com/) to install dependencies.
+Clone this repo and use the [npm](https://www.npmjs.com/) to install the dependencies.
 
 ```node
 npm install -g dbgen-cli
@@ -31,7 +31,7 @@ npm install -g dbgen-cli
 
 Create a global symlink for a dependency.
 
-```node
+```sh
 npm link
 ```
 
