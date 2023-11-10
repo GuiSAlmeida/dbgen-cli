@@ -12,7 +12,7 @@
               |___/                              
 ```
 
-dbgen-cli is a SGDB used with CLI created to study the practices of sql commands, databases and JS ES6 features.  
+dbgen-cli is a DBMS (Data Base Management System) used with CLI created to study the practices of sql commands, databases and JS ES6 features.  
 <br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/45276342/121779626-03c74280-cb73-11eb-9aa7-6f7caa20c1e0.gif" alt="dbgen-cli" width="960" height="auto"/></p>
